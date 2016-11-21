@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Algorithms
@@ -7,6 +9,28 @@ namespace Algorithms
     class Program
     {
         static void Main(string[] args)
+        {
+            //InsertionSort();
+            _214AddNumbers();
+        }
+
+        private static void _214AddNumbers()
+        {
+            while (true)
+            {
+                Console.Write("Enter numeral base:");
+                var numeralBase = uint.Parse(Console.ReadLine());
+                Console.Write("Enter first operand:");
+                var num1 = Integer.Parse(Console.ReadLine(), numeralBase);
+                Console.Write("Enter second operand:");
+                var num2 = Integer.Parse(Console.ReadLine(), numeralBase);
+
+                Console.WriteLine(num1 + num2);
+                Console.ReadLine();
+            }
+        }
+
+        private static void InsertionSort()
         {
             var elementsCount = 100000;
 
@@ -27,13 +51,13 @@ namespace Algorithms
 
             for (var i = 1; i <= threadCount; i++)
             {
-                StartJobTask(i, elementsCount);
+                StartInsertionSortJobTask(i, elementsCount);
             }
 
             Console.ReadKey();
         }
 
-        private static Task StartJobTask(int orderNumber, int elementsCount = 10000)
+        private static Task StartInsertionSortJobTask(int orderNumber, int elementsCount = 10000)
         {
             return Task.Run(() =>
             {
