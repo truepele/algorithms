@@ -1,24 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Algorithms;
 
 namespace MergeSort
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            var unsorted = new int[] { 1, 4, 2, 5, 0, 55, 21, 21, 55, 83, 95, 22, 111, 2, 3 };
+            var unsorted = ArrayHelpers.RandomNumericArray(15);
+
+            Console.WriteLine("Unsorted:");
+            foreach (var i in unsorted)
+            {
+                Console.WriteLine($"{i} ");
+            }
 
             var sorted = MergeSort(unsorted);
 
+            Console.WriteLine("Sorted:");
             foreach (var i in sorted)
             {
                 Console.WriteLine($"{i} ");
             }
+
+            Console.ReadLine();
         }
 
-        static IList<int> MergeSort(IList<int> unsorted)
+        private static ICollection<int> MergeSort(ICollection<int> unsorted)
         {
             var count = unsorted.Count;
 
@@ -28,28 +38,23 @@ namespace MergeSort
             }
 
             var leftCount = count / 2;
-            int rightCount = count - leftCount;
-
-            // Divide
-            IList<int> left = unsorted.Take(leftCount).ToList();
-            IList<int> right = unsorted.Skip(leftCount).Take(rightCount).ToList();
+            var rightCount = count - leftCount;
 
             // MergeSort left
-            left = MergeSort(left);
+            var left = MergeSort(unsorted.Take(leftCount).ToArray());
 
             // MergeSort right            
-            right = MergeSort(right);
+            var right = MergeSort(unsorted.Skip(leftCount).Take(rightCount).ToArray());
 
             // Merge
-            return Merge(left, right);
+            return Merge(left, right).ToArray();
         }
 
-        private static IList<int> Merge(IList<int> left, IList<int> right)
-        {
-            int leftIndex = 0;
-            var rightIndex = 0;
 
-            var result = new List<int>(left.Count + right.Count);
+        private static IEnumerable<int> Merge(ICollection<int> left, ICollection<int> right)
+        {
+            var leftIndex = 0;
+            var rightIndex = 0;
 
             var leftCount = left.Count;
             var rightCount = right.Count;
@@ -58,26 +63,19 @@ namespace MergeSort
             {
                 if (leftIndex < leftCount && rightIndex < rightCount)
                 {
-                    if (left[leftIndex] < right[rightIndex])
-                    {
-                        result.Add(left[leftIndex++]);
-                    }
-                    else 
-                    {
-                        result.Add(right[rightIndex++]);
-                    }
+                    yield return left.ElementAt(leftIndex) < right.ElementAt(rightIndex)
+                        ? left.ElementAt(leftIndex++)
+                        : right.ElementAt(rightIndex++);
                 }
                 else if (leftIndex < leftCount)
                 {
-                    result.Add(left[leftIndex++]);
+                    yield return left.ElementAt(leftIndex++);
                 }
                 else
                 {
-                    result.Add(right[rightIndex++]);
+                    yield return right.ElementAt(rightIndex++);
                 }
             }
-
-            return result;
         }
     }
 }
