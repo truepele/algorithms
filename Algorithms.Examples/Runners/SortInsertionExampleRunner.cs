@@ -1,36 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
+using Algorithms.Common;
 
-namespace Algorithms
+namespace Algorithms.Examples
 {
-    class Program
+    internal class SortInsertionExampleRunner : IExampleRunner
     {
-        static void Main(string[] args)
-        {
-            //InsertionSort();
-            _214AddNumbers();
-        }
-
-        private static void _214AddNumbers()
-        {
-            while (true)
-            {
-                Console.Write("Enter numeral base:");
-                var numeralBase = uint.Parse(Console.ReadLine());
-                Console.Write("Enter first operand:");
-                var num1 = Integer.Parse(Console.ReadLine(), numeralBase);
-                Console.Write("Enter second operand:");
-                var num2 = Integer.Parse(Console.ReadLine(), numeralBase);
-
-                Console.WriteLine(num1 + num2);
-                Console.ReadLine();
-            }
-        }
-
-        private static void InsertionSort()
+        public void Run()
         {
             var elementsCount = 100000;
 

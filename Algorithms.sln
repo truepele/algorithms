@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{99786665-3E25-4F6B-BBC6-20747BCAC823}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Common", "Algorithms.Common\Algorithms.Common.csproj", "{83CD627F-B323-4000-AC39-B4E9F544C443}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.1.InsertionSort", "2.1.InsertionSort\2.1.InsertionSort.csproj", "{7CDB9EA1-A01B-4F03-B907-E697728F064D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Examples", "Algorithms.Examples\Algorithms.Examples.csproj", "{F37678C8-25B1-4BA5-A0CA-58CFD322274A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeSort", "MergeSort\MergeSort.csproj", "{A7051300-344A-4FFD-95FA-5E1344B6ED0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{23DFB1A0-2B5C-43F2-9893-5836BA79D9E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{99786665-3E25-4F6B-BBC6-20747BCAC823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99786665-3E25-4F6B-BBC6-20747BCAC823}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99786665-3E25-4F6B-BBC6-20747BCAC823}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99786665-3E25-4F6B-BBC6-20747BCAC823}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7CDB9EA1-A01B-4F03-B907-E697728F064D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CDB9EA1-A01B-4F03-B907-E697728F064D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CDB9EA1-A01B-4F03-B907-E697728F064D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CDB9EA1-A01B-4F03-B907-E697728F064D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A7051300-344A-4FFD-95FA-5E1344B6ED0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A7051300-344A-4FFD-95FA-5E1344B6ED0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A7051300-344A-4FFD-95FA-5E1344B6ED0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A7051300-344A-4FFD-95FA-5E1344B6ED0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83CD627F-B323-4000-AC39-B4E9F544C443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83CD627F-B323-4000-AC39-B4E9F544C443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83CD627F-B323-4000-AC39-B4E9F544C443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83CD627F-B323-4000-AC39-B4E9F544C443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F37678C8-25B1-4BA5-A0CA-58CFD322274A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F37678C8-25B1-4BA5-A0CA-58CFD322274A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F37678C8-25B1-4BA5-A0CA-58CFD322274A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F37678C8-25B1-4BA5-A0CA-58CFD322274A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23DFB1A0-2B5C-43F2-9893-5836BA79D9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23DFB1A0-2B5C-43F2-9893-5836BA79D9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23DFB1A0-2B5C-43F2-9893-5836BA79D9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23DFB1A0-2B5C-43F2-9893-5836BA79D9E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
