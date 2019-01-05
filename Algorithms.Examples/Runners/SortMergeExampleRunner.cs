@@ -1,5 +1,6 @@
 ﻿using System;
-using Algorithms.Common;
+using System.Linq;
+using truepele.Common;
 
 namespace Algorithms.Examples
 {
@@ -7,7 +8,7 @@ namespace Algorithms.Examples
     {
         public void Run()
         {
-            var unsorted = ArrayHelpers.RandomNumericArray(15);
+            var unsorted = new Random().NextIntEnumerable(15).ToArray();
 
             Console.WriteLine("Unsorted:");
             foreach (var i in unsorted)

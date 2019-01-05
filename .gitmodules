@@ -1,0 +1,3 @@
+[submodule "truepele.misc"]
+	path = truepele.misc
+	url = https://github.com/truepele/misc.git

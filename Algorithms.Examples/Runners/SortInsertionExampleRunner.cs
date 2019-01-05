@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
-using Algorithms.Common;
+using truepele.Common;
 
 namespace Algorithms.Examples
 {
@@ -38,7 +39,7 @@ namespace Algorithms.Examples
         {
             return Task.Run(() =>
             {
-                var array = ArrayHelpers.RandomNumericArray(elementsCount);
+                var array = new Random().NextIntEnumerable(elementsCount).ToArray();
                 //  Console.WriteLine($"Input array: {string.Join(",", array)}");
                 var wd = new Stopwatch();
                 wd.Start();

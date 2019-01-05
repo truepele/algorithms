@@ -9,7 +9,7 @@
     <Folder Include="Runners\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Algorithms.Common\Algorithms.Common.csproj" />
     <ProjectReference Include="..\Algorithms\Algorithms.csproj" />
+    <ProjectReference Include="..\truepele.misc\misc\misc.csproj" />
   </ItemGroup>
 </Project>
